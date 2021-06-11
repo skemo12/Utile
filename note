@@ -1,0 +1,3 @@
+inorder prio - st eu dr 
+postoder prio - st dr eu
+preorder prio = eu st dr
