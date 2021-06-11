@@ -1,3 +1,15 @@
 inorder prio - st eu dr 
 postoder prio - st dr eu
 preorder prio = eu st dr
+
+
+Care dintre urmatorii algoritmi de sortare sunt stabili?
+Select one:
+a. Quicksort si sortarea prin insertie
+b. Merge sort si sortarea prin insertie
+c. Sortarea prin insertie si sortarea prin selectie d. Merge sort si sortarea prin selectie 
+Răspunsul dumneavoastră este incorect.
+The correct answer is: Merge sort si sortarea prin insertie
+
+
+Dijstrak and other https://graphonline.ru/en/

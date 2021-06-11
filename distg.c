@@ -8,6 +8,31 @@ typedef struct G
     int mas[10][10];
 } Graph;
 
+
+int mistery(Graph* g, int u, int v){ 
+    int *visited = (int*)malloc(g->size*sizeof(int)); 
+    int *e = (int*)malloc(g->size*sizeof(int)); 
+    for(int i = 0; i < g->size; i++)
+    {
+         visited[i] = 0; e[i] = 0; 
+    } 
+    Queue* q = createQueue(); 
+    visited[u] = 1; enqueue(q,u); 
+    while(!isQueueEmpty(q))
+    { 
+    u = front(q); dequeue(q); 
+    for(int i = 0; i < g->size; i++){ 
+        if(g->mas[u][i] && !visited[i])
+        {
+            e[i] = e[u] + 1; visited[i] = 1; enqueue(q,i); 
+        } 
+    }   
+    }
+    int aux = e[v]; free(e); free(visited); destroyQueue(q); 
+    return aux; 
+} 
+
+
 void printAllDis (Graph *g, int idx, int source, int dis, int *visited)
 {
     if (visited[source])
@@ -62,6 +87,7 @@ int main () {
     int *visited = (int *) calloc(10, sizeof(int));
     printAllDis(g, 1, 0, 0, visited);
     
-
+    printf("\n\n");
+    mistery(g, 0 , 1);
     return 0;
 }
